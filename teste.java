@@ -1,7 +1,4 @@
-import java.util.*;
-
 import java.util.Scanner;
-
 public class teste {
     public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
@@ -15,8 +12,9 @@ public class teste {
       if(media >= 6){
         System.out.println("Aprovado");
         
-      }if else()
-      
+      }else if(media >= 4){
+        System.out.println("Recuperação");
+      }
       else{
         System.out.println("Reprovado");
 
@@ -24,6 +22,5 @@ public class teste {
       
 
       sc.close();
-         
     }
 }

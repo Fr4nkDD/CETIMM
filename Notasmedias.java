@@ -4,7 +4,6 @@ public class Notasmedias {
 public static void main(String[] args) {
 Scanner sc = new Scanner(System.in);
 
-```
     double[] notas = new double[8];
 
     // Entrada das 8 notas
@@ -39,7 +38,6 @@ Scanner sc = new Scanner(System.in);
 
     sc.close();
 }
-```
 
 }
 
