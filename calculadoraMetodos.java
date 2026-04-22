@@ -29,9 +29,11 @@ public class calculadoraMetodos {
         System.out.println("2 - Subtração");
         System.out.println("3 - Multiplicação");
         System.out.println("4 - Divisão");
-
+        int opcao;
+        do{
         System.out.print("Escolha uma operação: ");
-        int opcao = sc.nextInt();
+        opcao = sc.nextInt();
+        }while (opcao < 1 || opcao > 4);
 
         System.out.print("Digite o primeiro número: ");
         double num1 = sc.nextDouble();
@@ -41,7 +43,7 @@ public class calculadoraMetodos {
 
         String resultado;
 
-        if (opcao == 1) {
+        if(opcao == 1){
             resultado = String.valueOf(somar(num1, num2));
         } else if (opcao == 2) {
             resultado = String.valueOf(subtrair(num1, num2));
