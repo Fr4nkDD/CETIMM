@@ -23,41 +23,50 @@ public class calculadoraMetodos {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        System.out.println("=== Calculadora ===");
-        System.out.println("1 - Soma");
-        System.out.println("2 - Subtração");
-        System.out.println("3 - Multiplicação");
-        System.out.println("4 - Divisão");
-        int opcao;
+        int retorno;
         do{
-        System.out.print("Escolha uma operação: ");
-        opcao = sc.nextInt();
-        }while (opcao < 1 || opcao > 4);
+            System.out.println("=== Calculadora ===");
+            System.out.println("1 - Soma");
+            System.out.println("2 - Subtração");
+            System.out.println("3 - Multiplicação");
+            System.out.println("4 - Divisão");
+            int opcao;
+            do{
+            System.out.print("Escolha uma operação: ");
+            opcao = sc.nextInt();
+            }while (opcao < 1 || opcao > 4);
 
-        System.out.print("Digite o primeiro número: ");
-        double num1 = sc.nextDouble();
+            System.out.print("Digite o primeiro número: ");
+            double num1 = sc.nextDouble();
 
-        System.out.print("Digite o segundo número: ");
-        double num2 = sc.nextDouble();
+            System.out.print("Digite o segundo número: ");
+            double num2 = sc.nextDouble();
 
-        String resultado;
+            String resultado;
 
-        if(opcao == 1){
-            resultado = String.valueOf(somar(num1, num2));
-        } else if (opcao == 2) {
-            resultado = String.valueOf(subtrair(num1, num2));
-        } else if (opcao == 3) {
-            resultado = String.valueOf(multiplicar(num1, num2));
-        } else if (opcao == 4) {
-            resultado = dividir(num1, num2);
-        } else {
-            resultado = "Opção inválida!";
-        }
+            if(opcao == 1){
+                resultado = String.valueOf(somar(num1, num2));
+            } else if (opcao == 2) {
+                resultado = String.valueOf(subtrair(num1, num2));
+            } else if (opcao == 3) {
+                resultado = String.valueOf(multiplicar(num1, num2));
+            } else if (opcao == 4) {
+                resultado = dividir(num1, num2);
+            } else {
+                resultado = "Opção inválida!";
+            }
 
-        System.out.println("Resultado: " + resultado);
+            System.out.println("Resultado: " + resultado);
 
+
+            do{
+            System.err.println("Deseja realizar outra operação? (1 - Sim, 0 - Não)");
+
+            retorno = sc.nextInt();
+            }while (retorno != 0 && retorno != 1);
+        }while(retorno == 1);
         sc.close();
+
     }
 }
 

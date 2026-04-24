@@ -5,6 +5,7 @@ public class TesteCarro {
 
         Carro carro1 = new Carro();
         Carro carro2 = new Carro();
+        Carro carro3 = new Carro();
 
         carro1.marca = "Toyota";
         carro1.modelo = "Corolla";
@@ -15,6 +16,11 @@ public class TesteCarro {
         carro2.modelo = "Civic";
         carro2.ano = 2022;
         carro2.cor = "Preto";
+
+        carro3.marca = "Fiat";
+        carro3.modelo = "Toro";
+        carro3.ano = 2025;
+        carro3.cor = "Branco";
 
         System.out.println("=== DADOS DO CARRO 1 ===");
         System.out.println("Marca: " + carro1.marca);
@@ -29,5 +35,13 @@ public class TesteCarro {
         System.out.println("Modelo: " + carro2.modelo);
         System.out.println("Ano: " + carro2.ano);
         System.out.println("Cor: " + carro2.cor);
+
+        System.out.println();
+
+        System.out.println("=== DADOS DO CARRO 3 ===");
+        System.out.println("Marca: " + carro3.marca);
+        System.out.println("Modelo: " + carro3.modelo);
+        System.out.println("Ano: " + carro3.ano);
+        System.out.println("Cor: " + carro3.cor);
     }
 }
